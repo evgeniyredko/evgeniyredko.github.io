@@ -816,7 +816,7 @@ button[aria-label]::before {
 @media (width <= 63.99875rem) {
   .hero {
     padding-top: 3.125rem;
-    padding-bottom: 6.25rem;
+    padding-bottom: 3.125rem;
   }
 }
 @media (width <= 24.37375rem) {
@@ -954,16 +954,30 @@ button[aria-label]::before {
   padding-top: var(--section-padding-y);
   padding-bottom: var(--section-padding-y);
 }
+.skills__inner {
+  padding-bottom: 5rem;
+}
 .skills__title {
   font-size: 3.125rem;
   line-height: 100%;
   letter-spacing: -0.02em;
   margin-bottom: 1.875rem;
 }
+@media (width <= 47.99875rem) {
+  .skills__title {
+    text-align: center;
+    font-size: 2.25rem;
+  }
+}
 .skills__list {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
+}
+@media (width <= 47.99875rem) {
+  .skills__list {
+    gap: 0.9375rem;
+  }
 }
 
 .skill-card {
@@ -974,6 +988,13 @@ button[aria-label]::before {
   font-size: 1.25rem;
   box-shadow: var(--box-shadow);
   transition-duration: var(--transition-duration);
+}
+@media (width <= 47.99875rem) {
+  .skill-card {
+    text-align: center;
+    font-size: 1rem;
+    padding: 1.25rem 3.125rem;
+  }
 }
 
 .skill-card:hover {
@@ -990,17 +1011,26 @@ button[aria-label]::before {
   width: 0.75rem;
   height: 0.75rem;
 }
-
-.grid--2 {
-  --columns: 2;
+@media (width <= 47.99875rem) {
+  .skill-card::before {
+    top: 1.5625rem;
+    left: 1.5625rem;
+  }
 }
 
 .grid {
-  -moz-columns: 1;
-       columns: 1;
+  --columns: 2;
+  -moz-columns: 2;
+       columns: 2;
   display: grid;
   gap: 1.5625rem;
   grid-template-columns: repeat(var(--columns, 1), 1fr);
+}
+@media (width <= 47.99875rem) {
+  .grid {
+    --columns: 1;
+    gap: 5rem;
+  }
 }
 
 .footer {
