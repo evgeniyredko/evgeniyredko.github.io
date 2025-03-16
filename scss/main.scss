@@ -11,10 +11,11 @@
 @use "./blocks/header";
 @use "./blocks/theme";
 @use "./blocks/hero";
-@use "./blocks/typed-text";
+@use "./blocks/live-typing";
+@use "./blocks/skills";
 @use "./blocks/footer";
 @use "./blocks/soc1als";
 
-.header {
-  // display: none !important;
-}
+// .footer {
+//   display: none !important;
+// }

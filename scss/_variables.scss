@@ -2,7 +2,7 @@
 
 body {
   &.dark-theme {
-    --color-light: #000000;
+    --color-light: #171718;
     --color-dark: #ffffff;
     --color-gray: #252526;
 
@@ -16,7 +16,8 @@ body {
   --color-dark: #000000;
   --color-gray: #f0f0f0;
 
-  --color-accent: #2d5bff;
+  // --color-accent: #2d5bff;
+  --color-accent: #0077ff;
 
   --border: #{rem(1)} solid var(--color-dark-15);
 
@@ -30,7 +31,13 @@ body {
 
   --transition-duration: 0.2s; // Скорость анимаций
 
+  --section-padding-y: #{rem(50)};
+
   @include laptop {
     --container-width: #{rem(1240)}; // Максимальный размер контейнера на laptop
   }
+}
+
+.accent-color {
+  color: var(--color-accent);
 }

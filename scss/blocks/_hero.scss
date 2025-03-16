@@ -1,12 +1,13 @@
 @use "../helpers/" as *;
 
 .hero {
-  padding-bottom: rem(140);
-  padding-top: rem(140);
+  padding-top: var(--section-padding-y);
+  padding-bottom: var(--section-padding-y);
 
   &__inner {
     display: flex;
-    min-height: rem(352);
+    padding-top: rem(140);
+    padding-bottom: rem(140);
   }
 
   &__body {
@@ -27,6 +28,7 @@
   &__tools {
     width: 45%;
     height: 100%;
+    min-height: rem(355);
     position: relative;
     z-index: 1;
 
@@ -137,9 +139,9 @@
 
     &-link {
       display: block;
+      filter: drop-shadow(0 5px 14px rgba(23, 25, 33, 0.3));
       &:hover {
-        transform: scale(1.2);
-        cursor: pointer;
+        transform: scale(1.15);
       }
     }
 
@@ -151,6 +153,7 @@
 
     @include tablet {
       width: 100%;
+      min-height: 0;
     }
   }
 
