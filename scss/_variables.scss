@@ -31,7 +31,7 @@ body {
 
   --transition-duration: 0.2s; // Скорость анимаций
 
-  --section-padding-y: #{rem(50)};
+  --section-padding-y: #{rem(100)};
 
   @include laptop {
     --container-width: #{rem(1240)}; // Максимальный размер контейнера на laptop

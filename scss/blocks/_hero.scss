@@ -2,16 +2,14 @@
 
 .hero {
   padding-top: var(--section-padding-y);
-  padding-bottom: var(--section-padding-y);
 
   &__inner {
     display: flex;
     padding-top: rem(140);
-    padding-bottom: rem(140);
+    padding-bottom: rem(50);
 
     @include laptop {
-      padding-top: rem(40);
-      padding-bottom: rem(20);
+      padding-top: rem(60);
     }
 
     @include laptop {

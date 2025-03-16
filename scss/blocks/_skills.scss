@@ -2,9 +2,9 @@
 
 .skills {
   padding-top: var(--section-padding-y);
-  padding-bottom: var(--section-padding-y);
 
   &__inner {
+    padding-top: rem(40);
     padding-bottom: rem(80);
   }
 
