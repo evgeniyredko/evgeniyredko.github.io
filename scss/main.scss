@@ -1,0 +1,20 @@
+@use "normalize";
+@use "fonts";
+@use "variables";
+@use "utils";
+@use "globals";
+
+@use "./blocks/icon";
+@use "./blocks/logo";
+@use "./blocks/button";
+@use "./blocks/burger-button";
+@use "./blocks/header";
+@use "./blocks/theme";
+@use "./blocks/hero";
+@use "./blocks/typed-text";
+@use "./blocks/footer";
+@use "./blocks/soc1als";
+
+.header {
+  // display: none !important;
+}

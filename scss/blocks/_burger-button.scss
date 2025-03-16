@@ -1,0 +1,75 @@
+@use "../helpers/" as *;
+
+.burger-button {
+  // @include square(rem(46));
+
+  width: rem(96);
+  height: rem(46);
+
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  // padding: rem(8.5) rem(4.25);
+  padding: rem(8.5) rem(4.25) rem(8.5) rem(50);
+  color: var(--color-dark);
+  background-color: transparent;
+  border: none;
+
+  &[aria-label] {
+    &::before {
+      width: rem(96);
+      height: rem(46);
+    }
+  }
+
+  @include mobile-s {
+    width: rem(60);
+    height: rem(46);
+    padding-left: rem(9.25);
+    &[aria-label] {
+      &::before {
+        width: rem(60);
+        height: rem(46);
+      }
+    }
+  }
+
+  @include hover {
+    color: var(--color-accent);
+  }
+
+  &.is-active {
+    .burger-button__line {
+      &:first-child {
+        rotate: 45deg;
+        transform-origin: 0;
+        translate: 0.35em -0.1em;
+      }
+      &:nth-child(2) {
+        rotate: -45deg;
+      }
+      &:last-child {
+        width: 0;
+      }
+
+      @include mobile-s {
+        &:first-child {
+          translate: 0.45em -0.3em;
+        }
+      }
+    }
+  }
+
+  &__line {
+    width: 100%;
+    height: rem(4);
+    border-radius: rem(5);
+    background-color: currentColor;
+    transition-duration: var(--transition-duration);
+
+    &:last-child {
+      align-self: end;
+      width: 55%;
+    }
+  }
+}

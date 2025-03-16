@@ -1,0 +1,36 @@
+@use "helpers" as *;
+
+body {
+  &.dark-theme {
+    --color-light: #000000;
+    --color-dark: #ffffff;
+    --color-gray: #252526;
+
+    --box-shadow: 0 #{rem(5)} #{rem(14)} 0 rgba(32, 32, 32, 0.5);
+    --box-shadow-inset: inset 0 #{rem(5)} #{rem(14)} 0 rgb(0 0 0 / 0.5);
+  }
+}
+
+:root {
+  --color-light: #ffffff;
+  --color-dark: #000000;
+  --color-gray: #f0f0f0;
+
+  --color-accent: #2d5bff;
+
+  --border: #{rem(1)} solid var(--color-dark-15);
+
+  --box-shadow: 0 #{rem(5)} #{rem(14)} 0 rgba(69, 69, 69, 0.1);
+  --box-shadow-inset: inset 0 #{rem(5)} #{rem(14)} 0 rgb(0 0 0 / 0.15);
+
+  --font-family-base: "Montserrat", sans-serif;
+
+  --container-width: #{rem(1240)}; // Максимальный размер контейнера
+  --container-padding-x: #{rem(20)}; // Минимальный отступ padding от контейнера
+
+  --transition-duration: 0.2s; // Скорость анимаций
+
+  @include laptop {
+    --container-width: #{rem(1240)}; // Максимальный размер контейнера на laptop
+  }
+}

@@ -1,0 +1,42 @@
+@use "../helpers/" as *;
+
+.logo {
+  // max-width: fluid(96, 64); // На Desktop 179px, на Mobile 126px
+  // filter: drop-shadow(var(--box-shadow));
+  // filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.7));
+  // filter: drop-shadow(0 5px 14px rgba(23, 25, 33, 0.2));
+
+  border: 2px solid #f0f0f0;
+  border-radius: 15px;
+  width: rem(96);
+  height: rem(50);
+  background-color: var(--color-dark);
+  // box-shadow: inset rem(1) rem(1) rem(5) rgba(255, 255, 255, 0.5);
+
+  &:hover {
+    background-color: var(--color-accent);
+    transform: scale(1.1);
+    & .logo__image {
+      filter: none !important;
+    }
+  }
+}
+
+.logo__image {
+  width: rem(37);
+  height: rem(25);
+  margin: auto;
+}
+
+.header__logo {
+  @include mobile-s {
+    width: rem(65);
+  }
+}
+
+.dark-theme {
+  & .logo__image {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(344deg)
+      brightness(100%) contrast(103%);
+  }
+}

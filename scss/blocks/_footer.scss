@@ -1,0 +1,52 @@
+@use "../helpers/" as *;
+
+.footer {
+  display: flex;
+  box-shadow: var(--box-shadow);
+  background-color: var(--color-light);
+  box-shadow: 0 0 14px 0 rgba(23, 25, 33, 0.05);
+
+  &__inner {
+    padding-block: rem(25);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: rem(30);
+
+    @include mobile {
+      padding-block: rem(10);
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  &__title {
+    font-size: fluid(40, 24);
+    margin-bottom: rem(40);
+    line-height: 1.2;
+    & span {
+      color: var(--color-accent);
+    }
+
+    @include mobile {
+      margin-bottom: rem(20);
+    }
+  }
+
+  &__description {
+    font-size: fluid(20, 14);
+  }
+
+  &__contacts {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: space-between;
+
+    @include mobile {
+      align-items: center;
+    }
+  }
+}

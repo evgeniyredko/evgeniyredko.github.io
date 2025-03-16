@@ -1,0 +1,81 @@
+@use "../helpers/" as *;
+
+.typed-name,
+.typed-description,
+.buttonCheck {
+  opacity: 0;
+}
+
+.live-typing {
+  width: 55%;
+  font-size: rem(50);
+  letter-spacing: -0.02em;
+
+  @include laptop {
+    font-size: fluid(50, 32);
+    margin: auto 0;
+  }
+
+  @include tablet {
+    width: 100%;
+    font-size: rem(50);
+    text-align: center;
+    padding-bottom: rem(80);
+  }
+
+  @include mobile {
+    font-size: rem(42);
+  }
+
+  @include mobile-s {
+    font-size: rem(32);
+  }
+
+  @include mobile-xs {
+    font-size: rem(26);
+    padding-bottom: rem(60);
+  }
+}
+
+.typed-hello {
+  color: #2d5bff;
+}
+
+.typed-name {
+  margin-bottom: rem(10);
+}
+
+.typed-description {
+  line-height: 100%;
+  margin-bottom: rem(15);
+}
+
+.button-check {
+  opacity: 0;
+  border: 2px solid #f0f0f0;
+  border-radius: 20px;
+  padding: rem(16) rem(50);
+
+  font-weight: 400;
+  font-size: rem(24);
+  line-height: 100%;
+  letter-spacing: -0.04em;
+  color: #fff;
+
+  box-shadow: 0 5px 14px 0 rgba(23, 25, 33, 0.25);
+  background: #2d5bff;
+
+  @include mobile-s {
+    margin-top: rem(10);
+    padding: rem(15) rem(30);
+  }
+
+  @include mobile-xs {
+    padding: rem(10) rem(20);
+  }
+}
+
+.button-check:hover {
+  background-color: #000;
+  transform: scale(1.1);
+}
