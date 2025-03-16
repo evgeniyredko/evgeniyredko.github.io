@@ -78,6 +78,14 @@
   }
 }
 
+.button-check-overlay {
+  @include tablet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 .button-check {
   opacity: 0;
   border: 2px solid #f0f0f0;
@@ -94,8 +102,6 @@
   background: #2d5bff;
 
   @include tablet {
-    display: block;
-    margin: 0 auto;
   }
 
   @include mobile-s {

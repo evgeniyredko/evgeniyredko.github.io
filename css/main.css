@@ -914,6 +914,14 @@ button[aria-label]::before {
   }
 }
 
+@media (width <= 63.99875rem) {
+  .button-check-overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 .button-check {
   opacity: 0;
   border: 2px solid #f0f0f0;
@@ -926,12 +934,6 @@ button[aria-label]::before {
   color: #fff;
   box-shadow: 0 5px 14px 0 rgba(23, 25, 33, 0.25);
   background: #2d5bff;
-}
-@media (width <= 63.99875rem) {
-  .button-check {
-    display: block;
-    margin: 0 auto;
-  }
 }
 @media (width <= 30.06125rem) {
   .button-check {
