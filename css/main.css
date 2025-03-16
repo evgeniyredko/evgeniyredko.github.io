@@ -659,6 +659,18 @@ button[aria-label]::before {
   padding-top: 8.75rem;
   padding-bottom: 8.75rem;
 }
+@media (width <= 90.06125rem) {
+  .hero__inner {
+    padding-top: 2.5rem;
+    padding-bottom: 1.25rem;
+  }
+}
+@media (width <= 90.06125rem) {
+  .hero__inner {
+    padding-top: 1.25rem;
+    padding-bottom: 0;
+  }
+}
 .hero__body {
   display: flex;
   width: 100%;
@@ -831,6 +843,8 @@ button[aria-label]::before {
 @media (width <= 63.99875rem) {
   .live-typing {
     padding-bottom: 5rem;
+    max-width: 37.5rem;
+    margin: 0 auto;
   }
 }
 @media (width <= 24.37375rem) {

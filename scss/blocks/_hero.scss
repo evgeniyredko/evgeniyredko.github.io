@@ -8,6 +8,16 @@
     display: flex;
     padding-top: rem(140);
     padding-bottom: rem(140);
+
+    @include laptop {
+      padding-top: rem(40);
+      padding-bottom: rem(20);
+    }
+
+    @include laptop {
+      padding-top: rem(20);
+      padding-bottom: 0;
+    }
   }
 
   &__body {
