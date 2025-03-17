@@ -4,8 +4,7 @@
   padding-top: var(--section-padding-y);
 
   &__inner {
-    padding-top: rem(40);
-    padding-bottom: rem(80);
+    padding-top: rem(90);
   }
 
   &__title {
@@ -27,6 +26,10 @@
     @include mobile {
       gap: rem(15);
     }
+  }
+
+  @include mobile {
+    padding-top: 0;
   }
 }
 

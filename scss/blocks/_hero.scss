@@ -5,16 +5,12 @@
 
   &__inner {
     display: flex;
+    margin-top: rem(100);
     padding-top: rem(140);
-    padding-bottom: rem(50);
 
     @include laptop {
-      padding-top: rem(60);
-    }
-
-    @include laptop {
+      margin-top: rem(70);
       padding-top: rem(20);
-      padding-bottom: 0;
     }
   }
 
@@ -167,11 +163,9 @@
 
   @include tablet {
     padding-top: rem(50);
-    padding-bottom: rem(50);
   }
 
   @include mobile-xs {
     padding-top: rem(30);
-    padding-bottom: rem(60);
   }
 }
