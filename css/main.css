@@ -291,6 +291,8 @@ h4, .h4,
 h5, .h5,
 h6, .h6 {
   color: var(--color-dark);
+  line-height: 100%;
+  letter-spacing: -0.02em;
 }
 
 /* prettier-ignore */
@@ -309,17 +311,17 @@ h6, .h6 {
 
 h1,
 .h1 {
-  font-size: clamp(1.5rem, 0.9583333333rem + 2.7083333333vw, 3.125rem);
+  font-size: clamp(2rem, 1.625rem + 1.875vw, 3.125rem);
 }
 
 h2,
 .h2 {
-  font-size: clamp(1.5rem, 0.9583333333rem + 2.7083333333vw, 3.125rem);
+  font-size: clamp(2rem, 1.625rem + 1.875vw, 3.125rem);
 }
 
 h3,
 .h3 {
-  font-size: clamp(1.5rem, 1.1666666667rem + 1.6666666667vw, 2.5rem);
+  font-size: clamp(1.25rem, 1rem + 1.25vw, 2rem);
 }
 
 h4,
@@ -1031,11 +1033,174 @@ button[aria-label]::before {
   }
 }
 
+.portfolio {
+  padding-top: var(--section-padding-y);
+}
+@media (width <= 47.99875rem) {
+  .portfolio__title {
+    text-align: center;
+  }
+}
+.portfolio__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5625rem;
+}
+.portfolio__item {
+  padding: 3.125rem;
+  border-radius: 1.5625rem;
+  background-color: var(--color-light);
+}
+@media (width <= 63.99875rem) {
+  .portfolio__item {
+    padding: 1.875rem;
+  }
+}
+@media (width <= 47.99875rem) {
+  .portfolio__item {
+    padding-block: 3.125rem;
+  }
+}
+@media (width <= 30.06125rem) {
+  .portfolio__item {
+    padding: 2.5rem;
+  }
+}
+@media (width <= 24.37375rem) {
+  .portfolio__item {
+    padding: 1.875rem;
+  }
+}
+.portfolio-card {
+  display: flex;
+  flex-direction: row;
+  gap: 6.25rem;
+}
+.portfolio-card__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+@media (width <= 47.99875rem) {
+  .portfolio-card__header {
+    flex-direction: column;
+    margin-bottom: 1.5625rem;
+  }
+}
+.portfolio-card__title {
+  position: relative;
+  margin-bottom: 1.5625rem;
+}
+@media (width <= 47.99875rem) {
+  .portfolio-card__title {
+    margin: 0 auto;
+    margin-bottom: 0.3125rem;
+  }
+}
+.portfolio-card__link::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -12px;
+  width: 10px;
+  height: 10px;
+  background-image: url("./../../images/icons/link.png");
+  background-repeat: no-repeat;
+}
+.portfolio-card__description {
+  margin-bottom: 2.5rem;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 125%;
+  letter-spacing: -0.05em;
+}
+@media (width <= 63.99875rem) {
+  .portfolio-card__description {
+    font-size: 1rem;
+    margin-bottom: 1.875rem;
+  }
+}
+.portfolio-card__tools {
+  display: flex;
+  flex-direction: row;
+  gap: 1.25rem;
+}
+@media (width <= 63.99875rem) {
+  .portfolio-card__tools {
+    gap: 0.625rem;
+  }
+}
+@media (width <= 63.99875rem) {
+  .portfolio-card__tool {
+    width: 2.1875rem;
+  }
+}
+.portfolio-card__date {
+  font-size: 1.25rem;
+  background-color: var(--color-gray);
+  border-radius: 0.9375rem;
+  padding: 0.6875rem 2.5rem;
+  box-shadow: var(--box-shadow-inset);
+}
+@media (width <= 63.99875rem) {
+  .portfolio-card__date {
+    font-size: 1rem;
+    padding: 0.5625rem 2.1875rem;
+  }
+}
+.portfolio-card__image-wrapper {
+  max-width: -moz-max-content;
+  max-width: max-content;
+  width: 100%;
+}
+@media (width <= 47.99875rem) {
+  .portfolio-card__image-wrapper {
+    margin: 0 auto;
+  }
+}
+.portfolio-card__image {
+  border-radius: 1.5625rem;
+  height: 100%;
+}
+.portfolio-card__footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+@media (width <= 47.99875rem) {
+  .portfolio-card__footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.875rem;
+  }
+}
+@media (width <= 90.06125rem) {
+  .portfolio-card {
+    gap: 2.5rem;
+  }
+}
+@media (width <= 63.99875rem) {
+  .portfolio-card {
+    gap: 1.875rem;
+  }
+}
+@media (width <= 47.99875rem) {
+  .portfolio-card {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.portfolio__title {
+  margin-bottom: 1.5625rem;
+}
+
 .footer {
   display: flex;
   box-shadow: var(--box-shadow);
   background-color: var(--color-light);
   box-shadow: 0 0 14px 0 rgba(23, 25, 33, 0.05);
+  margin-top: 6.25rem;
 }
 .footer__inner {
   padding-block: 1.5625rem;

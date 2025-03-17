@@ -1,0 +1,161 @@
+@use "../helpers/" as *;
+
+.portfolio {
+  padding-top: var(--section-padding-y);
+
+  &__title {
+    @include mobile {
+      text-align: center;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: rem(25);
+  }
+
+  &__item {
+    padding: rem(50);
+    border-radius: rem(25);
+    background-color: var(--color-light);
+
+    @include tablet {
+      padding: rem(30);
+    }
+
+    @include mobile {
+      padding-block: rem(50);
+    }
+
+    @include mobile-s {
+      padding: rem(40);
+    }
+
+    @include mobile-xs {
+      padding: rem(30);
+    }
+  }
+
+  &-card {
+    display: flex;
+    flex-direction: row;
+    gap: rem(100);
+
+    &__header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      @include mobile {
+        flex-direction: column;
+        margin-bottom: rem(25);
+      }
+    }
+
+    &__title {
+      position: relative;
+      margin-bottom: rem(25);
+
+      @include mobile {
+        margin: 0 auto;
+        margin-bottom: rem(5);
+      }
+    }
+
+    &__link::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: -12px;
+      width: 10px;
+      height: 10px;
+      background-image: url("./../../images/icons/link.png");
+      background-repeat: no-repeat;
+    }
+
+    &__description {
+      margin-bottom: rem(40);
+      font-weight: 400;
+      font-size: rem(20);
+      line-height: 125%;
+      letter-spacing: -0.05em;
+
+      @include tablet {
+        font-size: rem(16);
+        margin-bottom: rem(30);
+      }
+    }
+
+    &__tools {
+      display: flex;
+      flex-direction: row;
+      gap: rem(20);
+
+      @include tablet {
+        gap: rem(10);
+      }
+    }
+
+    &__tool {
+      @include tablet {
+        width: rem(35);
+      }
+    }
+
+    &__date {
+      font-size: rem(20);
+      background-color: var(--color-gray);
+      border-radius: rem(15);
+      padding: rem(11) rem(40);
+      box-shadow: var(--box-shadow-inset);
+
+      @include tablet {
+        font-size: rem(16);
+        padding: rem(9) rem(35);
+      }
+    }
+
+    &__image-wrapper {
+      max-width: max-content;
+      width: 100%;
+
+      @include mobile {
+        margin: 0 auto;
+      }
+    }
+
+    &__image {
+      border-radius: rem(25);
+      height: 100%;
+    }
+
+    &__footer {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      @include mobile {
+        flex-direction: column;
+        align-items: center;
+        gap: rem(30);
+      }
+    }
+
+    @include laptop {
+      gap: rem(40);
+    }
+
+    @include tablet {
+      gap: rem(30);
+    }
+
+    @include mobile {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+}
+
+.portfolio__title {
+  margin-bottom: rem(25);
+}

@@ -2,10 +2,6 @@
 import Header from "./Header.js";
 import Hero from "./Hero.js";
 
-new Header();
-Hero();
-
-// Закрытие бурегер-меню при клике на ссылку
 var menuLinks = document.querySelectorAll(".header__menu .header__menu-link");
 menuLinks.forEach(function (link) {
   link.addEventListener("click", function () {
@@ -16,3 +12,6 @@ menuLinks.forEach(function (link) {
     }
   });
 });
+
+new Header();
+Hero();
