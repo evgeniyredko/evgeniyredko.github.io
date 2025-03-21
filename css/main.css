@@ -883,6 +883,9 @@ button[aria-label]::before {
   }
 }
 
+.typed-hello {
+  margin-bottom: 1.25rem;
+}
 @media (width <= 63.99875rem) {
   .typed-hello {
     margin-bottom: 0.625rem;
@@ -1120,6 +1123,11 @@ button[aria-label]::before {
     margin-bottom: 1.875rem;
   }
 }
+@media (width <= 47.99875rem) {
+  .portfolio-card__description {
+    text-align: justify;
+  }
+}
 .portfolio-card__tools {
   display: flex;
   flex-direction: row;
@@ -1161,6 +1169,10 @@ button[aria-label]::before {
 .portfolio-card__image {
   border-radius: 1.5625rem;
   height: 100%;
+  transition-duration: var(--transition-duration);
+}
+.portfolio-card__image:hover {
+  transform: scale(1.05);
 }
 .portfolio-card__footer {
   display: flex;

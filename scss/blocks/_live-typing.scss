@@ -56,6 +56,8 @@
 }
 
 .typed-hello {
+  margin-bottom: rem(20);
+
   @include tablet {
     margin-bottom: rem(10);
   }

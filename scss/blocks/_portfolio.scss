@@ -84,6 +84,10 @@
         font-size: rem(16);
         margin-bottom: rem(30);
       }
+
+      @include mobile {
+        text-align: justify;
+      }
     }
 
     &__tools {
@@ -127,6 +131,11 @@
     &__image {
       border-radius: rem(25);
       height: 100%;
+      transition-duration: var(--transition-duration);
+    }
+
+    &__image:hover {
+      transform: scale(1.05);
     }
 
     &__footer {
