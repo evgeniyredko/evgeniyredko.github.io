@@ -6,7 +6,9 @@ body {
     --color-dark: #ffffff;
     --color-gray: #252526;
 
-    --box-shadow: 0 #{rem(5)} #{rem(14)} 0 rgba(32, 32, 32, 0.5);
+    // --box-shadow: 0 #{rem(5)} #{rem(14)} 0 rgba(32, 32, 32, 0.5);
+
+    --box-shadow: 0 #{rem(2)} #{rem(10)} 0 rgba(0, 0, 0, 0.8);
     --box-shadow-inset: inset 0 #{rem(5)} #{rem(14)} 0 rgb(0 0 0 / 0.5);
   }
 }
