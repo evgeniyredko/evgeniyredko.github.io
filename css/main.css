@@ -834,6 +834,7 @@ button[aria-label]::before {
 
 .live-typing {
   width: 55%;
+  margin: auto;
 }
 @media (width <= 63.99875rem) {
   .live-typing {
@@ -1116,6 +1117,11 @@ button[aria-label]::before {
     margin-bottom: 0.3125rem;
   }
 }
+.portfolio-card__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 .portfolio-card__link {
   color: var(--color-accent);
 }
@@ -1137,7 +1143,6 @@ button[aria-label]::before {
   font-weight: 400;
   font-size: 1.25rem;
   line-height: 125%;
-  letter-spacing: -0.05em;
 }
 @media (width <= 63.99875rem) {
   .portfolio-card__description {

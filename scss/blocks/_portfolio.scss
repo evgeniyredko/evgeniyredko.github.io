@@ -71,6 +71,12 @@
       }
     }
 
+    &__body {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
     &__link {
       color: var(--color-accent);
 
@@ -95,7 +101,6 @@
       font-weight: 400;
       font-size: rem(20);
       line-height: 125%;
-      letter-spacing: -0.05em;
 
       @include tablet {
         font-size: rem(16);

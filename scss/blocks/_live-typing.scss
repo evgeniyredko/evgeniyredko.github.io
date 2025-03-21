@@ -7,7 +7,9 @@
 }
 
 .live-typing {
+  // font-family: "Inter", sans-serif;
   width: 55%;
+  margin: auto;
 
   @include tablet {
     width: 100%;
