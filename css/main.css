@@ -1432,7 +1432,7 @@ button[aria-label]::before {
   background-repeat: no-repeat;
 }
 .work-experience-card__link:hover {
-  transform: scale(1.05);
+  transform: scale(1.04);
 }
 .work-experience-card__tools {
   display: flex;
