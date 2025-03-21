@@ -64,6 +64,7 @@
     padding: rem(50) rem(80);
     border-radius: rem(25);
     background-color: var(--color-light);
+    box-shadow: var(--box-shadow);
 
     @include mobile {
       padding: rem(30) rem(30);
@@ -89,6 +90,7 @@
       transform: translateY(-50%);
       z-index: 1;
       border-color: var(--color-light);
+      box-shadow: var(--box-shadow);
 
       @include mobile {
         right: calc(100% + var(--circleSize) * 2);
@@ -156,7 +158,7 @@
 
     &__date {
       display: inline-block;
-      font-size: rem(20);
+      font-size: rem(18);
       background-color: var(--color-gray);
       border-radius: rem(15);
       padding: rem(10) rem(30);
@@ -166,6 +168,11 @@
 
       @include tablet {
         font-size: rem(16);
+        padding: rem(9) rem(35);
+      }
+
+      @include mobile {
+        font-size: rem(14);
         padding: rem(9) rem(35);
       }
     }

@@ -1068,6 +1068,7 @@ button[aria-label]::before {
   padding: 3.125rem;
   border-radius: 1.5625rem;
   background-color: var(--color-light);
+  box-shadow: var(--box-shadow);
 }
 @media (width <= 63.99875rem) {
   .portfolio__item {
@@ -1299,6 +1300,7 @@ button[aria-label]::before {
   padding: 3.125rem 5rem;
   border-radius: 1.5625rem;
   background-color: var(--color-light);
+  box-shadow: var(--box-shadow);
 }
 @media (width <= 47.99875rem) {
   .work-experience__item {
@@ -1327,6 +1329,7 @@ button[aria-label]::before {
   transform: translateY(-50%);
   z-index: 1;
   border-color: var(--color-light);
+  box-shadow: var(--box-shadow);
 }
 @media (width <= 47.99875rem) {
   .work-experience__item::before {
@@ -1388,7 +1391,7 @@ button[aria-label]::before {
 }
 .work-experience-card__date {
   display: inline-block;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   background-color: var(--color-gray);
   border-radius: 0.9375rem;
   padding: 0.625rem 1.875rem;
@@ -1399,6 +1402,12 @@ button[aria-label]::before {
 @media (width <= 63.99875rem) {
   .work-experience-card__date {
     font-size: 1rem;
+    padding: 0.5625rem 2.1875rem;
+  }
+}
+@media (width <= 47.99875rem) {
+  .work-experience-card__date {
+    font-size: 0.875rem;
     padding: 0.5625rem 2.1875rem;
   }
 }
