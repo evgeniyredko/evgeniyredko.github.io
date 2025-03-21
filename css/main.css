@@ -815,6 +815,11 @@ button[aria-label]::before {
     padding-top: 3.125rem;
   }
 }
+@media (width <= 47.99875rem) {
+  .hero {
+    padding-bottom: 0;
+  }
+}
 @media (width <= 24.37375rem) {
   .hero {
     padding-top: 1.875rem;
@@ -957,6 +962,11 @@ button[aria-label]::before {
 .skills__inner {
   padding-top: 2.5rem;
 }
+@media (width <= 47.99875rem) {
+  .skills__inner {
+    padding-top: 0;
+  }
+}
 .skills__title {
   font-size: 3.125rem;
   line-height: 100%;
@@ -977,11 +987,6 @@ button[aria-label]::before {
 @media (width <= 47.99875rem) {
   .skills__list {
     gap: 0.9375rem;
-  }
-}
-@media (width <= 47.99875rem) {
-  .skills {
-    padding-top: 0;
   }
 }
 
@@ -1043,6 +1048,11 @@ button[aria-label]::before {
 }
 .portfolio__inner {
   padding-top: 2.5rem;
+}
+@media (width <= 47.99875rem) {
+  .portfolio__inner {
+    padding-top: 0;
+  }
 }
 @media (width <= 47.99875rem) {
   .portfolio__title {
@@ -1219,10 +1229,15 @@ button[aria-label]::before {
 .work-experience__inner {
   padding-top: 2.5rem;
 }
+@media (width <= 47.99875rem) {
+  .work-experience__inner {
+    padding-top: 0;
+  }
+}
 .work-experience__title {
   margin-bottom: 1.5625rem;
 }
-@media (width <= 30.06125rem) {
+@media (width <= 47.99875rem) {
   .work-experience__title {
     text-align: center;
   }
@@ -1473,6 +1488,11 @@ button[aria-label]::before {
 @media (width <= 47.99875rem) {
   .footer__contacts {
     align-items: center;
+  }
+}
+@media (width <= 47.99875rem) {
+  .footer {
+    margin-top: 0;
   }
 }
 

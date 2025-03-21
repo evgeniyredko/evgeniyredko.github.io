@@ -50,4 +50,7 @@
       align-items: center;
     }
   }
+  @include mobile {
+    margin-top: 0;
+  }
 }

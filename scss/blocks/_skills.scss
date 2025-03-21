@@ -5,6 +5,10 @@
 
   &__inner {
     padding-top: rem(40);
+
+    @include mobile {
+      padding-top: 0;
+    }
   }
 
   &__title {
@@ -26,10 +30,6 @@
     @include mobile {
       gap: rem(15);
     }
-  }
-
-  @include mobile {
-    padding-top: 0;
   }
 }
 

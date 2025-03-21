@@ -166,6 +166,10 @@
     padding-top: rem(50);
   }
 
+  @include mobile {
+    padding-bottom: 0;
+  }
+
   @include mobile-xs {
     padding-top: rem(30);
   }

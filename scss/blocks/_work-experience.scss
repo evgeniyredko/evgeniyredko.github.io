@@ -6,12 +6,16 @@
 
   &__inner {
     padding-top: rem(40);
+
+    @include mobile {
+      padding-top: 0;
+    }
   }
 
   &__title {
     margin-bottom: rem(25);
 
-    @include mobile-s {
+    @include mobile {
       text-align: center;
     }
   }
