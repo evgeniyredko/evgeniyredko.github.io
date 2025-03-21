@@ -1,8 +1,8 @@
 @use "../helpers/" as *;
 
 .work-experience {
-  margin-top: 200px;
-  margin-bottom: 200px;
+  padding-top: var(--section-padding-y);
+  padding-bottom: var(--section-padding-y);
 
   &__title {
     margin-bottom: rem(25);
