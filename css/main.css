@@ -655,6 +655,7 @@ button[aria-label]::before {
 
 .hero {
   padding-top: var(--section-padding-y);
+  padding-bottom: 3.125rem;
 }
 .hero__inner {
   display: flex;
@@ -954,7 +955,7 @@ button[aria-label]::before {
   padding-top: var(--section-padding-y);
 }
 .skills__inner {
-  padding-top: 5.625rem;
+  padding-top: 2.5rem;
 }
 .skills__title {
   font-size: 3.125rem;
@@ -1039,6 +1040,9 @@ button[aria-label]::before {
 
 .portfolio {
   padding-top: var(--section-padding-y);
+}
+.portfolio__inner {
+  padding-top: 2.5rem;
 }
 @media (width <= 47.99875rem) {
   .portfolio__title {
@@ -1212,18 +1216,41 @@ button[aria-label]::before {
   padding-top: var(--section-padding-y);
   padding-bottom: var(--section-padding-y);
 }
+.work-experience__inner {
+  padding-top: 2.5rem;
+}
 .work-experience__title {
   margin-bottom: 1.5625rem;
+}
+@media (width <= 30.06125rem) {
+  .work-experience__title {
+    text-align: center;
+  }
 }
 .work-experience__body {
   position: relative;
   padding-left: 5rem;
+}
+@media (width <= 47.99875rem) {
+  .work-experience__body {
+    padding-left: 2.5625rem;
+  }
+}
+@media (width <= 24.37375rem) {
+  .work-experience__body {
+    padding-left: 0;
+  }
 }
 .work-experience__list {
   --circleSize: 0.9375rem;
   display: flex;
   flex-direction: column;
   gap: 1.5625rem;
+}
+@media (width <= 47.99875rem) {
+  .work-experience__list {
+    --circleSize: 0.5rem;
+  }
 }
 .work-experience__list::before {
   background-color: var(--color-accent);
@@ -1235,11 +1262,26 @@ button[aria-label]::before {
   transform: translateY(-50%);
   width: 1px;
 }
+@media (width <= 24.37375rem) {
+  .work-experience__list::before {
+    content: none;
+  }
+}
 .work-experience__item {
   position: relative;
   padding: 3.125rem 5rem;
   border-radius: 1.5625rem;
   background-color: var(--color-light);
+}
+@media (width <= 47.99875rem) {
+  .work-experience__item {
+    padding: 1.875rem 1.875rem;
+  }
+}
+@media (width <= 30.06125rem) {
+  .work-experience__item {
+    text-align: center;
+  }
 }
 .work-experience__item::before {
   width: var(--circleSize);
@@ -1259,6 +1301,16 @@ button[aria-label]::before {
   z-index: 1;
   border-color: var(--color-light);
 }
+@media (width <= 47.99875rem) {
+  .work-experience__item::before {
+    right: calc(100% + var(--circleSize) * 2);
+  }
+}
+@media (width <= 24.37375rem) {
+  .work-experience__item::before {
+    content: none;
+  }
+}
 .work-experience__item:first-child::after {
   content: "";
   top: 0;
@@ -1267,6 +1319,16 @@ button[aria-label]::before {
   left: -55px;
   width: 0.0625rem;
   background-color: var(--color-gray);
+}
+@media (width <= 47.99875rem) {
+  .work-experience__item:first-child::after {
+    left: -30px;
+  }
+}
+@media (width <= 24.37375rem) {
+  .work-experience__item:first-child::after {
+    content: none;
+  }
 }
 .work-experience__item:last-child::after {
   content: "";
@@ -1277,8 +1339,25 @@ button[aria-label]::before {
   width: 0.0625rem;
   background-color: var(--color-gray);
 }
+@media (width <= 47.99875rem) {
+  .work-experience__item:last-child::after {
+    left: -30px;
+  }
+}
+@media (width <= 24.37375rem) {
+  .work-experience__item:last-child::after {
+    content: none;
+  }
+}
 .work-experience-card {
+  padding-right: 2.5rem;
   background: url(./../../images/icons/work/top-right.png) top right/50px 50px no-repeat, url(./../../images/icons/work/bottom-right.png) bottom right/50px 50px no-repeat;
+}
+@media (width <= 47.99875rem) {
+  .work-experience-card {
+    background: none;
+    padding-right: 0;
+  }
 }
 .work-experience-card__date {
   display: inline-block;
@@ -1301,9 +1380,15 @@ button[aria-label]::before {
 }
 .work-experience-card__position {
   margin-bottom: 0.9375rem;
+  font-weight: 600;
 }
 .work-experience-card__description {
   margin-bottom: 2.5rem;
+}
+@media (width <= 30.06125rem) {
+  .work-experience-card__description {
+    text-align: justify;
+  }
 }
 .work-experience-card__link {
   position: relative;
@@ -1321,11 +1406,17 @@ button[aria-label]::before {
 .work-experience-card__tools {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: 1.25rem;
 }
 @media (width <= 63.99875rem) {
   .work-experience-card__tools {
     gap: 0.625rem;
+  }
+}
+@media (width <= 30.06125rem) {
+  .work-experience-card__tools {
+    justify-content: center;
   }
 }
 @media (width <= 63.99875rem) {

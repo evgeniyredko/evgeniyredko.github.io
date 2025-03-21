@@ -4,13 +4,29 @@
   padding-top: var(--section-padding-y);
   padding-bottom: var(--section-padding-y);
 
+  &__inner {
+    padding-top: rem(40);
+  }
+
   &__title {
     margin-bottom: rem(25);
+
+    @include mobile-s {
+      text-align: center;
+    }
   }
 
   &__body {
     position: relative;
     padding-left: rem(80);
+
+    @include mobile {
+      padding-left: rem(41);
+    }
+
+    @include mobile-xs {
+      padding-left: 0;
+    }
   }
 
   &__list {
@@ -18,6 +34,10 @@
     display: flex;
     flex-direction: column;
     gap: rem(25);
+
+    @include mobile {
+      --circleSize: #{rem(8)};
+    }
 
     &::before {
       background-color: var(--color-accent);
@@ -28,6 +48,10 @@
       top: 50%;
       transform: translateY(-50%);
       width: 1px;
+
+      @include mobile-xs {
+        content: none;
+      }
     }
   }
 
@@ -36,6 +60,14 @@
     padding: rem(50) rem(80);
     border-radius: rem(25);
     background-color: var(--color-light);
+
+    @include mobile {
+      padding: rem(30) rem(30);
+    }
+
+    @include mobile-s {
+      text-align: center;
+    }
 
     &::before {
       @include square(var(--circleSize));
@@ -53,6 +85,14 @@
       transform: translateY(-50%);
       z-index: 1;
       border-color: var(--color-light);
+
+      @include mobile {
+        right: calc(100% + var(--circleSize) * 2);
+      }
+
+      @include mobile-xs {
+        content: none;
+      }
     }
 
     &:first-child {
@@ -65,6 +105,14 @@
         //   right: calc(100% + var(--circleSize) * 2);
         width: rem(1);
         background-color: var(--color-gray);
+
+        @include mobile {
+          left: -30px;
+        }
+
+        @include mobile-xs {
+          content: none;
+        }
       }
     }
 
@@ -78,15 +126,29 @@
         //   right: calc(100% + var(--circleSize) * 2);
         width: rem(1);
         background-color: var(--color-gray);
+
+        @include mobile {
+          left: -30px;
+        }
+
+        @include mobile-xs {
+          content: none;
+        }
       }
     }
   }
 
   &-card {
+    padding-right: rem(40);
     background: url(./../../images/icons/work/top-right.png) top right/50px 50px
         no-repeat,
       url(./../../images/icons/work/bottom-right.png) bottom right/50px 50px
         no-repeat;
+
+    @include mobile {
+      background: none;
+      padding-right: 0;
+    }
 
     &__date {
       display: inline-block;
@@ -110,10 +172,15 @@
 
     &__position {
       margin-bottom: rem(15);
+      font-weight: 600;
     }
 
     &__description {
       margin-bottom: rem(40);
+
+      @include mobile-s {
+        text-align: justify;
+      }
     }
 
     &__link {
@@ -133,10 +200,15 @@
     &__tools {
       display: flex;
       flex-direction: row;
+      flex-wrap: wrap;
       gap: rem(20);
 
       @include tablet {
         gap: rem(10);
+      }
+
+      @include mobile-s {
+        justify-content: center;
       }
     }
 
