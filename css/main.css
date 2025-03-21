@@ -945,6 +945,7 @@ button[aria-label]::before {
 }
 
 .button-check:hover {
+  color: var(--color-light);
   background-color: #000;
   transform: scale(1.06);
 }
