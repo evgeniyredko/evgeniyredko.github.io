@@ -1,0 +1,149 @@
+@use "../helpers/" as *;
+
+.work-experience {
+  margin-top: 200px;
+  margin-bottom: 200px;
+
+  &__title {
+    margin-bottom: rem(25);
+  }
+
+  &__body {
+    position: relative;
+    padding-left: rem(80);
+  }
+
+  &__list {
+    --circleSize: #{rem(15)};
+    display: flex;
+    flex-direction: column;
+    gap: rem(25);
+
+    &::before {
+      background-color: var(--color-accent);
+      content: "";
+      height: 100%;
+      position: absolute;
+      right: calc(100% - calc(var(--circleSize) - rem(2)) * 2);
+      top: 50%;
+      transform: translateY(-50%);
+      width: 1px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    padding: rem(50) rem(80);
+    border-radius: rem(25);
+    background-color: var(--color-light);
+
+    &::before {
+      @include square(var(--circleSize));
+      align-items: center;
+      background-color: var(--color-accent);
+      border: calc(var(--circleSize) + rem(2)) solid var(--color-dark);
+      border-radius: 50%;
+      box-sizing: initial;
+      content: "";
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      right: calc(100% + var(--circleSize) * 2);
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1;
+      border-color: var(--color-light);
+    }
+
+    &:first-child {
+      &::after {
+        content: "";
+        top: 0;
+        height: 50%;
+        position: absolute;
+        left: -55px;
+        //   right: calc(100% + var(--circleSize) * 2);
+        width: rem(1);
+        background-color: var(--color-gray);
+      }
+    }
+
+    &:last-child {
+      &::after {
+        content: "";
+        bottom: 0;
+        height: 50%;
+        position: absolute;
+        left: -55px;
+        //   right: calc(100% + var(--circleSize) * 2);
+        width: rem(1);
+        background-color: var(--color-gray);
+      }
+    }
+  }
+
+  &-card {
+    background: url(./../../images/icons/work/top-right.png) top right/50px 50px
+        no-repeat,
+      url(./../../images/icons/work/bottom-right.png) bottom right/50px 50px
+        no-repeat;
+
+    &__date {
+      display: inline-block;
+      font-size: rem(20);
+      background-color: var(--color-gray);
+      border-radius: rem(15);
+      padding: rem(10) rem(30);
+      box-shadow: var(--box-shadow-inset);
+      letter-spacing: -0.05em;
+      margin-bottom: rem(40);
+
+      @include tablet {
+        font-size: rem(16);
+        padding: rem(9) rem(35);
+      }
+    }
+
+    &__title {
+      margin-bottom: rem(10);
+    }
+
+    &__position {
+      margin-bottom: rem(15);
+    }
+
+    &__description {
+      margin-bottom: rem(40);
+    }
+
+    &__link {
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: -12px;
+        width: 10px;
+        height: 10px;
+        background-image: url("./../../images/icons/link.png");
+        background-repeat: no-repeat;
+      }
+    }
+
+    &__tools {
+      display: flex;
+      flex-direction: row;
+      gap: rem(20);
+
+      @include tablet {
+        gap: rem(10);
+      }
+    }
+
+    &__tool {
+      @include tablet {
+        width: rem(35);
+      }
+    }
+  }
+}
