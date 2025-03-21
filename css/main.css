@@ -206,7 +206,7 @@ body.dark-theme {
   --color-light: #171718;
   --color-dark: #ffffff;
   --color-gray: #252526;
-  --box-shadow: 0 0.125rem 0.625rem 0 rgba(0, 0, 0, 0.8);
+  --box-shadow: 0 0.125rem 0.25rem 0 rgba(0, 0, 0, 0.8);
   --box-shadow-inset: inset 0 0.3125rem 0.875rem 0 rgb(0 0 0 / 0.5);
 }
 
