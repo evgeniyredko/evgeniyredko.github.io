@@ -90,7 +90,7 @@
 
 .button-check {
   opacity: 0;
-  border: 2px solid #f0f0f0;
+  border: 2px solid #fff;
   border-radius: 20px;
   padding: rem(16) rem(50);
 
@@ -98,10 +98,10 @@
   font-size: rem(24);
   line-height: 100%;
   letter-spacing: -0.04em;
-  color: #fff;
+  color: var(--color-light);
 
   box-shadow: 0 5px 14px 0 rgba(23, 25, 33, 0.25);
-  background: #2d5bff;
+  background-color: var(--color-dark);
 
   @include tablet {
   }
@@ -117,7 +117,7 @@
 }
 
 .button-check:hover {
-  color: var(--color-light);
-  background-color: #000;
+  color: #fff;
+  background-color: var(--color-accent);
   transform: scale(1.06);
 }

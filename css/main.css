@@ -927,16 +927,16 @@ button[aria-label]::before {
 
 .button-check {
   opacity: 0;
-  border: 2px solid #f0f0f0;
+  border: 2px solid #fff;
   border-radius: 20px;
   padding: 1rem 3.125rem;
   font-weight: 400;
   font-size: 1.5rem;
   line-height: 100%;
   letter-spacing: -0.04em;
-  color: #fff;
+  color: var(--color-light);
   box-shadow: 0 5px 14px 0 rgba(23, 25, 33, 0.25);
-  background: #2d5bff;
+  background-color: var(--color-dark);
 }
 @media (width <= 30.06125rem) {
   .button-check {
@@ -951,8 +951,8 @@ button[aria-label]::before {
 }
 
 .button-check:hover {
-  color: var(--color-light);
-  background-color: #000;
+  color: #fff;
+  background-color: var(--color-accent);
   transform: scale(1.06);
 }
 
@@ -1115,15 +1115,21 @@ button[aria-label]::before {
     margin-bottom: 0.3125rem;
   }
 }
+.portfolio-card__link {
+  color: var(--color-accent);
+}
 .portfolio-card__link::after {
   content: "";
   position: absolute;
   top: 0;
-  right: -12px;
+  right: -14px;
   width: 10px;
   height: 10px;
   background-image: url("./../../images/icons/link.png");
   background-repeat: no-repeat;
+}
+.portfolio-card__link:hover {
+  transform: scale(1.1);
 }
 .portfolio-card__description {
   margin-bottom: 2.5rem;
@@ -1152,6 +1158,12 @@ button[aria-label]::before {
   .portfolio-card__tools {
     gap: 0.625rem;
   }
+}
+.portfolio-card__tool {
+  transition-duration: var(--transition-duration);
+}
+.portfolio-card__tool:hover {
+  transform: scale(1.15);
 }
 @media (width <= 63.99875rem) {
   .portfolio-card__tool {
@@ -1407,16 +1419,20 @@ button[aria-label]::before {
 }
 .work-experience-card__link {
   position: relative;
+  color: var(--color-accent);
 }
 .work-experience-card__link::after {
   content: "";
   position: absolute;
   top: 0;
-  right: -12px;
+  right: -14px;
   width: 10px;
   height: 10px;
   background-image: url("./../../images/icons/link.png");
   background-repeat: no-repeat;
+}
+.work-experience-card__link:hover {
+  transform: scale(1.05);
 }
 .work-experience-card__tools {
   display: flex;
@@ -1433,6 +1449,12 @@ button[aria-label]::before {
   .work-experience-card__tools {
     justify-content: center;
   }
+}
+.work-experience-card__tool {
+  transition-duration: var(--transition-duration);
+}
+.work-experience-card__tool:hover {
+  transform: scale(1.15);
 }
 @media (width <= 63.99875rem) {
   .work-experience-card__tool {

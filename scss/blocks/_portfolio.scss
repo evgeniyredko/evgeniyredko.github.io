@@ -70,15 +70,23 @@
       }
     }
 
-    &__link::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: -12px;
-      width: 10px;
-      height: 10px;
-      background-image: url("./../../images/icons/link.png");
-      background-repeat: no-repeat;
+    &__link {
+      color: var(--color-accent);
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: -14px;
+        width: 10px;
+        height: 10px;
+        background-image: url("./../../images/icons/link.png");
+        background-repeat: no-repeat;
+      }
+
+      &:hover {
+        transform: scale(1.1);
+      }
     }
 
     &__description {
@@ -109,6 +117,12 @@
     }
 
     &__tool {
+      transition-duration: var(--transition-duration);
+
+      &:hover {
+        transform: scale(1.15);
+      }
+
       @include tablet {
         width: rem(35);
       }
