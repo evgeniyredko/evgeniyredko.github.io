@@ -21,3 +21,5 @@ menuLinks.forEach(function (link) {
     }
   });
 });
+
+new Header();
