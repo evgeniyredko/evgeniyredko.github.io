@@ -200,6 +200,7 @@
       position: relative;
       color: var(--color-accent);
       letter-spacing: -0.04em;
+      display: inline;
 
       &::after {
         content: "";
