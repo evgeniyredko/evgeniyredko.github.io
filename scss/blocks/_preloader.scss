@@ -39,7 +39,8 @@ h1,
 h2,
 .footer,
 .logo,
-.theme {
+.theme,
+.burger-button {
   /* Скроем элемент в начальном состоянии */
   opacity: 0;
   transform: translateY(20px);
@@ -50,7 +51,8 @@ h1.element-show,
 h2.element-show,
 .footer.element-show,
 .logo.element-show,
-.theme.element-show {
+.theme.element-show,
+.burger-button.element-show {
   opacity: 1;
   transition: all 1s;
   transform: translateY(0%);

@@ -23,7 +23,9 @@ let options = {
   threshold: [0.2],
 };
 let observer = new IntersectionObserver(onEntry, options);
-let elements = document.querySelectorAll("li, h1, h2, .footer, .logo, .theme");
+let elements = document.querySelectorAll(
+  "li, h1, h2, .footer, .logo, .theme, .burger-button"
+);
 
 for (let elm of elements) {
   observer.observe(elm);
