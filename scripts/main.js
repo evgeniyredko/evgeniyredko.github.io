@@ -11,6 +11,24 @@ window.onload = function () {
   Hero();
 };
 
+function onEntry(entry) {
+  entry.forEach((change) => {
+    if (change.isIntersecting) {
+      change.target.classList.add("element-show");
+    }
+  });
+}
+
+let options = {
+  threshold: [0.5],
+};
+let observer = new IntersectionObserver(onEntry, options);
+let elements = document.querySelectorAll("li, h1, h2, .footer, .logo, .theme");
+
+for (let elm of elements) {
+  observer.observe(elm);
+}
+
 var menuLinks = document.querySelectorAll(".header__menu .header__menu-link");
 menuLinks.forEach(function (link) {
   link.addEventListener("click", function () {
