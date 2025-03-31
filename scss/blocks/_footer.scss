@@ -2,20 +2,25 @@
 
 .footer {
   display: flex;
-  box-shadow: var(--box-shadow);
-  background-color: var(--color-light);
-  box-shadow: 0 0 14px 0 rgba(23, 25, 33, 0.05);
+  width: 100%;
   margin-top: rem(50);
+  margin-bottom: rem(70);
 
   &__inner {
-    padding-block: rem(25);
+    box-shadow: var(--box-shadow);
+    background-color: var(--color-light);
+    box-shadow: 0 0 14px 0 rgba(23, 25, 33, 0.05);
+    border-radius: rem(25);
+    padding: rem(25) rem(80);
     width: 100%;
     display: flex;
     justify-content: space-between;
     gap: rem(30);
+    box-shadow: var(--box-shadow);
 
     @include mobile {
       padding-block: rem(10);
+      padding: rem(20) rem(30);
       flex-direction: column;
       align-items: center;
       text-align: center;
@@ -24,7 +29,7 @@
 
   &__title {
     font-size: fluid(40, 24);
-    margin-bottom: rem(40);
+    margin-bottom: rem(30);
     line-height: 1.2;
     & span {
       color: var(--color-accent);
@@ -50,6 +55,11 @@
       align-items: center;
     }
   }
+
+  @include tablet {
+    margin-bottom: rem(30);
+  }
+
   @include mobile {
     margin-top: 0;
   }

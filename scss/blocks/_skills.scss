@@ -14,8 +14,11 @@
   &__title {
     font-size: rem(50);
     line-height: 100%;
-    letter-spacing: -0.02em;
     margin-bottom: rem(30);
+
+    @include tablet {
+      font-size: rem(36);
+    }
 
     @include mobile {
       text-align: center;
@@ -41,6 +44,10 @@
   font-size: rem(20);
   box-shadow: var(--box-shadow);
   transition-duration: var(--transition-duration);
+
+  @include tablet {
+    font-size: rem(16);
+  }
 
   @include mobile {
     text-align: center;

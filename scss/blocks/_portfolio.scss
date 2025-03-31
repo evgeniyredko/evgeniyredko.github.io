@@ -67,7 +67,7 @@
 
       @include mobile {
         margin: 0 auto;
-        margin-bottom: rem(5);
+        margin-bottom: rem(10);
       }
     }
 
@@ -92,7 +92,7 @@
       }
 
       &:hover {
-        transform: scale(1.1);
+        text-decoration: underline;
       }
     }
 
@@ -125,24 +125,21 @@
     &__tool {
       transition-duration: var(--transition-duration);
 
-      &:hover {
-        transform: scale(1.15);
-      }
-
       @include tablet {
         width: rem(35);
       }
     }
 
     &__date {
-      font-size: rem(20);
+      font-size: rem(16);
       background-color: var(--color-gray);
       border-radius: rem(15);
-      padding: rem(11) rem(40);
+      padding: rem(10) rem(20);
+      display: flex;
+      align-items: center;
       box-shadow: var(--box-shadow-inset);
 
       @include tablet {
-        font-size: rem(16);
         padding: rem(9) rem(35);
       }
     }

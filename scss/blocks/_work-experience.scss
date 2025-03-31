@@ -2,7 +2,7 @@
 
 .work-experience {
   padding-top: var(--section-padding-y);
-  padding-bottom: var(--section-padding-y);
+  padding-bottom: rem(80);
 
   &__inner {
     padding-top: rem(40);
@@ -184,10 +184,12 @@
     &__position {
       margin-bottom: rem(15);
       font-weight: 600;
+      letter-spacing: -0.04em;
     }
 
     &__description {
       margin-bottom: rem(40);
+      letter-spacing: -0.04em;
 
       @include mobile-s {
         text-align: justify;
@@ -197,6 +199,7 @@
     &__link {
       position: relative;
       color: var(--color-accent);
+      letter-spacing: -0.04em;
 
       &::after {
         content: "";
@@ -210,7 +213,7 @@
       }
 
       &:hover {
-        transform: scale(1.04);
+        text-decoration: underline;
       }
     }
 
@@ -231,10 +234,6 @@
 
     &__tool {
       transition-duration: var(--transition-duration);
-
-      &:hover {
-        transform: scale(1.15);
-      }
 
       @include tablet {
         width: rem(35);
