@@ -5,10 +5,26 @@
   padding-bottom: rem(80);
 
   &__inner {
+    position: relative;
     padding-top: rem(40);
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 35px;
+      width: 51px;
+      height: 47px;
+      background-image: url("./../../images/icons/decoration.svg");
+      background-repeat: no-repeat;
+    }
 
     @include mobile {
       padding-top: 0;
+
+      &::after {
+        content: none;
+      }
     }
   }
 

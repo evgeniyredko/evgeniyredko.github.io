@@ -1023,11 +1023,25 @@ button[aria-label]::before {
   padding-top: var(--section-padding-y);
 }
 .skills__inner {
+  position: relative;
   padding-top: 2.5rem;
+}
+.skills__inner::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 35px;
+  width: 51px;
+  height: 47px;
+  background-image: url("./../../images/icons/decoration.svg");
+  background-repeat: no-repeat;
 }
 @media (width <= 47.99875rem) {
   .skills__inner {
     padding-top: 0;
+  }
+  .skills__inner::after {
+    content: none;
   }
 }
 .skills__title {
@@ -1065,6 +1079,7 @@ button[aria-label]::before {
   font-size: 1.25rem;
   box-shadow: var(--box-shadow);
   transition-duration: var(--transition-duration);
+  padding-right: 2.5rem;
 }
 @media (width <= 63.99875rem) {
   .skill-card {
@@ -1118,11 +1133,25 @@ button[aria-label]::before {
   padding-top: var(--section-padding-y);
 }
 .portfolio__inner {
+  position: relative;
   padding-top: 2.5rem;
+}
+.portfolio__inner::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 35px;
+  width: 51px;
+  height: 47px;
+  background-image: url("./../../images/icons/decoration.svg");
+  background-repeat: no-repeat;
 }
 @media (width <= 47.99875rem) {
   .portfolio__inner {
     padding-top: 0;
+  }
+  .portfolio__inner::after {
+    content: none;
   }
 }
 @media (width <= 47.99875rem) {
@@ -1313,11 +1342,25 @@ button[aria-label]::before {
   padding-bottom: 5rem;
 }
 .work-experience__inner {
+  position: relative;
   padding-top: 2.5rem;
+}
+.work-experience__inner::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 35px;
+  width: 51px;
+  height: 47px;
+  background-image: url("./../../images/icons/decoration.svg");
+  background-repeat: no-repeat;
 }
 @media (width <= 47.99875rem) {
   .work-experience__inner {
     padding-top: 0;
+  }
+  .work-experience__inner::after {
+    content: none;
   }
 }
 .work-experience__title {

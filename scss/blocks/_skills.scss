@@ -4,10 +4,26 @@
   padding-top: var(--section-padding-y);
 
   &__inner {
+    position: relative;
     padding-top: rem(40);
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 35px;
+      width: 51px;
+      height: 47px;
+      background-image: url("./../../images/icons/decoration.svg");
+      background-repeat: no-repeat;
+    }
 
     @include mobile {
       padding-top: 0;
+
+      &::after {
+        content: none;
+      }
     }
   }
 
@@ -44,6 +60,7 @@
   font-size: rem(20);
   box-shadow: var(--box-shadow);
   transition-duration: var(--transition-duration);
+  padding-right: rem(40);
 
   @include tablet {
     font-size: rem(16);
