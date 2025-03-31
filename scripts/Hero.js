@@ -15,7 +15,7 @@ function Hero() {
     // Тут id того блока, в которм будет анимация
     stringsElement: "#typed-name", // Тут id блока из которого берем строки для анимации
     typeSpeed: 70, // Скорость печати
-    startDelay: 1650, // Задержка перед стартом анимации
+    startDelay: 1750, // Задержка перед стартом анимации
     loop: false, // Указываем, повторять ли анимацию
     preStringTyped: function () {
       return (document.querySelector(".typed-name").style.opacity = 1);

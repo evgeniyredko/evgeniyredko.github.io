@@ -8,6 +8,7 @@ window.onload = function () {
     document.body.classList.add("loaded");
     document.body.classList.remove("loaded_hiding");
   }, 500);
+  Hero();
 };
 
 var menuLinks = document.querySelectorAll(".header__menu .header__menu-link");
@@ -20,6 +21,3 @@ menuLinks.forEach(function (link) {
     }
   });
 });
-
-new Header();
-Hero();
