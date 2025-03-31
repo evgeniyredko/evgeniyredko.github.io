@@ -50,6 +50,7 @@ h6, .h6 {
 h1,
 .h1 {
   @include fluid-text(50, 32);
+  letter-spacing: -0.04em;
 }
 h2,
 .h2 {

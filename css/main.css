@@ -311,6 +311,7 @@ h6, .h6 {
 h1,
 .h1 {
   font-size: clamp(2rem, 1.625rem + 1.875vw, 3.125rem);
+  letter-spacing: -0.04em;
 }
 
 h2,
@@ -907,6 +908,10 @@ button[aria-label]::before {
   .typed-name {
     margin-bottom: 0.625rem;
   }
+}
+
+.typed-name span {
+  letter-spacing: -0.04em;
 }
 
 .typed-description {
