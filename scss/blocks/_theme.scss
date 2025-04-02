@@ -1,0 +1,54 @@
+@use "../helpers/" as *;
+
+.theme {
+  display: flex;
+  position: relative;
+  width: rem(96);
+  height: rem(50);
+  border-radius: rem(100);
+  border: rem(2) solid var(--color-gray);
+  background-color: var(--color-gray);
+  box-shadow: var(--box-shadow-inset);
+
+  &:hover {
+    border: rem(2) solid var(--color-accent);
+    cursor: pointer;
+  }
+
+  &__button {
+    @include square(rem(46));
+    border: none;
+    border-radius: rem(100);
+    z-index: 1;
+    background: none;
+    & img {
+      @include square(rem(20));
+      margin: auto;
+    }
+  }
+
+  &__active {
+    @include square(rem(46));
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: rem(100);
+    background-color: #ffffff;
+    transition-duration: 0.3s;
+
+    &--dark {
+      right: rem(46);
+    }
+  }
+}
+
+.dark-theme {
+  & .theme {
+    & button:nth-child(2) {
+      & img {
+        filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg)
+          brightness(102%) contrast(102%);
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+@use "sass:math";
+
+// Принимает число и возвращает результат деления переданного числа на 16 и добавляется единица измерения rem
+@function rem($pixel) {
+  @if math.is-unitless($pixel) {
+    @return math.div($pixel, 16) + rem;
+  } @else {
+    @error 'Не используйте единицы измерения при работе с функцией rem()! Передавайте аргументом только числа.';
+  }
+}
+
+// Функция будет в вызванном месте возвращать результат вычислений в виде SCSS функции clamp
+@function fluid($max: 100, $min: 10) {
+  $maxViewportWidth: 1280; // Максимальный размер макета
+  $minViewportWidth: 320; // Минимальный размер макета
+
+  $maxSize: math.div($max, 16);
+  $minSize: math.div($min, 16);
+  $maxWidth: math.div($maxViewportWidth, 16);
+  $minWidth: math.div($minViewportWidth, 16);
+
+  $slope: math.div(($maxSize - $minSize), ($maxWidth - $minWidth));
+  $yAxisIntersection: -$minWidth * $slope + $minSize;
+
+  @return clamp(
+    #{$minSize * 1rem},
+    #{$yAxisIntersection * 1rem} + #{$slope * 100vw},
+    #{$maxSize * 1rem}
+  );
+}

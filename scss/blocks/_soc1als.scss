@@ -1,0 +1,42 @@
+@use "../helpers/" as *;
+
+.soc1als {
+  &__list {
+    display: flex;
+    column-gap: rem(20);
+
+    @include tablet {
+      column-gap: rem(14);
+    }
+  }
+
+  &__item {
+    display: flex;
+  }
+
+  &__link {
+    --size: #{rem(50)};
+
+    @include square(var(--size));
+
+    @include tablet {
+      --size: #{rem(40)};
+      & svg {
+        @include square(var(--size));
+      }
+    }
+
+    &:hover {
+      transform: scale(1.2);
+      color: var(--color-dark);
+    }
+  }
+}
+
+body {
+  &.dark-theme {
+    &.soc1als__link {
+      color: var(--color-light);
+    }
+  }
+}
