@@ -47,137 +47,195 @@ h2.element-show,
   transform: translateY(0%);
 }
 
-html.is-lock {
-  overflow: hidden;
+/**
+  Нормализация блочной модели
+ */
+*,
+::before,
+::after {
+  box-sizing: border-box;
 }
 
-body {
-  font-size: clamp(0.875rem, 0.7916666667rem + 0.4166666667vw, 1.125rem);
-  display: flex;
-  flex-direction: column;
-  font-family: var(--font-family-base);
-  color: var(--color-dark);
-  background-color: var(--color-gray);
+/**
+     Убираем внутренние отступы слева тегам списков,
+     у которых есть атрибут class
+    */
+:where(ul, ol):where([class]) {
+  padding-left: 0;
 }
 
-main {
-  flex-grow: 1;
+/**
+     Убираем внешние отступы body и двум другим тегам,
+     у которых есть атрибут class
+    */
+body,
+:where(blockquote, figure):where([class]) {
+  margin: 0;
 }
 
-/* prettier-ignore */
-h1, .h1,
-h2, .h2,
-h3, .h3,
-h4, .h4,
-h5, .h5,
-h6, .h6 {
-  color: var(--color-dark);
-  line-height: 100%;
-  letter-spacing: -0.04em;
+/**
+     Убираем внешние отступы вертикали нужным тегам,
+     у которых есть атрибут class
+    */
+:where(h1, h2, h3, h4, h5, h6, p, ul, ol, dl):where([class]) {
+  margin-block: 0;
 }
 
-/* prettier-ignore */
-h1, .h1,
-h2, .h2,
-h3, .h3 {
-  font-weight: 500;
+:where(dd[class]) {
+  margin-left: 0;
 }
 
-/* prettier-ignore */
-h4, .h4,
-h5, .h5,
-h6, .h6 {
-  font-weight: 600;
+:where(fieldset[class]) {
+  margin-left: 0;
+  padding: 0;
+  border: none;
 }
 
-h1,
-.h1 {
-  font-size: clamp(2rem, 1.625rem + 1.875vw, 3.125rem);
-  letter-spacing: -0.04em;
+/**
+     Убираем стандартный маркер маркированному списку,
+     у которого есть атрибут class
+    */
+:where(ul[class]) {
+  list-style: none;
 }
 
-h2,
-.h2 {
-  letter-spacing: -0.04em;
-  font-size: clamp(2rem, 1.625rem + 1.875vw, 3.125rem);
+:where(address[class]) {
+  font-style: normal;
 }
 
-h3,
-.h3 {
-  font-size: clamp(1.25rem, 1rem + 1.25vw, 2rem);
-}
-
-h4,
-.h4 {
-  font-size: clamp(1.125rem, 1.0833333333rem + 0.2083333333vw, 1.25rem);
-}
-
-h5,
-.h5 {
-  font-size: clamp(1.125rem, 1rem + 0.625vw, 1.5rem);
-}
-
-h6,
-.h6 {
-  font-size: clamp(1rem, 0.9166666667rem + 0.4166666667vw, 1.25rem);
-}
-
+/**
+     Обнуляем вертикальные внешние отступы параграфа,
+     объявляем локальную переменную для внешнего отступа вниз,
+     чтобы избежать взаимодействие с более сложным селектором
+    */
 p {
-  letter-spacing: -0.04em;
+  --paragraphMarginBottom: 24px;
+  margin-block: 0;
 }
 
-a {
-  letter-spacing: -0.04em;
+/**
+     Внешний отступ вниз для параграфа без атрибута class,
+     который расположен не последним среди своих соседних элементов
+    */
+p:where(:not([class]):not(:last-child)) {
+  margin-bottom: var(--paragraphMarginBottom);
 }
 
-a,
-button,
-label,
+/**
+     Упрощаем работу с изображениями и видео
+    */
+img,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/**
+     Наследуем свойства шрифт для полей ввода
+    */
 input,
 textarea,
 select,
+button {
+  font: inherit;
+}
+
+html {
+  /**
+       Пригодится в большинстве ситуаций
+       (когда, например, нужно будет "прижать" футер к низу сайта)
+      */
+  height: 100%;
+  /**
+       Убираем скачок интерфейса по горизонтали
+       при появлении / исчезновении скроллбара
+      */
+  scrollbar-gutter: stable;
+}
+
+/**
+     Плавный скролл
+    */
+html,
+:has(:target) {
+  scroll-behavior: smooth;
+}
+
+body {
+  /**
+       Пригодится в большинстве ситуаций
+       (когда, например, нужно будет "прижать" футер к низу сайта)
+      */
+  min-height: 100%;
+  /**
+       Унифицированный интерлиньяж
+      */
+  line-height: 1.5;
+}
+
+/**
+     Нормализация высоты элемента ссылки при его инспектировании в DevTools
+    */
+a:where([class]) {
+  display: inline-flex;
+}
+
+/**
+     Курсор-рука при наведении на элемент
+    */
+button,
+label {
+  cursor: pointer;
+}
+
+/**
+     Приводим к единому цвету svg-элементы
+     (за исключением тех, у которых уже указан
+     атрибут fill со значением 'none' или начинается с 'url')
+    */
+:where([fill]:not([fill=none], [fill^=url])) {
+  fill: currentColor;
+}
+
+/**
+     Приводим к единому цвету svg-элементы
+     (за исключением тех, у которых уже указан
+     атрибут stroke со значением 'none')
+    */
+:where([stroke]:not([stroke=none], [stroke^=url])) {
+  stroke: currentColor;
+}
+
+/**
+     Чиним баг задержки смены цвета при взаимодействии с svg-элементами
+    */
 svg * {
-  transition-duration: var(--transition-duration);
+  transition-property: fill, stroke;
 }
 
-a {
-  color: inherit;
+/**
+     Приведение рамок таблиц в классический 'collapse' вид
+    */
+:where(table) {
+  border-collapse: collapse;
+  border-color: currentColor;
 }
-@media (any-hover: hover) {
-  a:hover {
-    color: var(--color-accent);
+
+/**
+     Удаляем все анимации и переходы для людей,
+     которые предпочитают их не использовать
+    */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
-@media (any-hover: none) {
-  a:active {
-    color: var(--color-accent);
-  }
-}
-a[class] {
-  text-decoration: none;
-}
-
-:focus-visible {
-  outline: 0.125rem dashed var(--color-light);
-  outline-offset: 0.25rem;
-  transition-duration: 0s !important;
-}
-
-a[aria-label],
-button[aria-label] {
-  position: relative;
-}
-a[aria-label]::before,
-button[aria-label]::before {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  translate: -50% -50%;
-  width: 2.75rem;
-  height: 2.75rem;
-  content: "";
-}
-
 @font-face {
   font-family: "Montserrat";
   src: local("Montserrat"), url(../fonts/Montserrat-Regular.woff2) format("woff2");
