@@ -10,12 +10,20 @@
   // font-family: "Inter", sans-serif;
   width: 55%;
   margin: auto;
-
   position: relative;
   animation: showLeft 1s;
 
   @include tablet {
     width: 100%;
+    min-height: 390px;
+  }
+
+  @include mobile {
+    min-height: 353px;
+  }
+
+  @include mobile-s {
+    min-height: 320px;
   }
 
   @include tablet {

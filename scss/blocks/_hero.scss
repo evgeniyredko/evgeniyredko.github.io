@@ -13,6 +13,14 @@
       margin-top: rem(70);
       padding-top: rem(20);
     }
+
+    @include tablet {
+      margin-top: rem(100);
+    }
+
+    @include mobile {
+      margin-top: rem(70);
+    }
   }
 
   &__body {
