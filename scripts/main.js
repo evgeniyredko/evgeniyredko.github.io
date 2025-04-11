@@ -2,6 +2,7 @@
 import Header from "./Header.js";
 import Hero from "./Hero.js";
 
+// Прелоадер
 window.onload = function () {
   document.body.classList.add("loaded_hiding");
   window.setTimeout(function () {
@@ -11,6 +12,7 @@ window.onload = function () {
   Hero();
 };
 
+// Плавная анимация появления блоков
 function onEntry(entry) {
   entry.forEach((change) => {
     if (change.isIntersecting) {
@@ -19,18 +21,20 @@ function onEntry(entry) {
   });
 }
 
+// Список блоков на которые повесится анимация
 let options = {
   threshold: [0.2],
 };
 let observer = new IntersectionObserver(onEntry, options);
 let elements = document.querySelectorAll(
-  "li, h1, h2, .footer, .logo, .theme, .burger-button"
+  "h2:not(.footer__title), .footer, .animation"
 );
 
 for (let elm of elements) {
   observer.observe(elm);
 }
 
+// Закрытие бургер-меню псле клика на пункт меню
 var menuLinks = document.querySelectorAll(".header__menu .header__menu-link");
 menuLinks.forEach(function (link) {
   link.addEventListener("click", function () {

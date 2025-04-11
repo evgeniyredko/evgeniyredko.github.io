@@ -23,25 +23,17 @@
 }
 
 /* Задаем высоту большим блокам, чтобы у нас на странице получится скролл */
-li,
-h1,
-h2,
+h2:not(.footer__title),
 .footer,
-.logo,
-.theme,
-.burger-button {
+.animation {
   /* Скроем элемент в начальном состоянии */
   opacity: 0;
   transform: translateY(20px);
 }
 
-li.element-show,
-h1.element-show,
-h2.element-show,
+h2:not(.footer__title).element-show,
 .footer.element-show,
-.logo.element-show,
-.theme.element-show,
-.burger-button.element-show {
+.animation.element-show {
   opacity: 1;
   transition: all 1s;
   transform: translateY(0%);
@@ -599,6 +591,7 @@ button[aria-label]::before {
 
 .header {
   position: fixed;
+  animation: showTop 1s;
   width: 100%;
   z-index: 100;
   top: 0;
@@ -735,6 +728,8 @@ button[aria-label]::before {
   }
 }
 .hero__tools {
+  position: relative;
+  animation: showRight 1s;
   width: 45%;
   height: 100%;
   min-height: 22.1875rem;
@@ -885,6 +880,8 @@ button[aria-label]::before {
 .live-typing {
   width: 55%;
   margin: auto;
+  position: relative;
+  animation: showLeft 1s;
 }
 @media (width <= 63.99875rem) {
   .live-typing {
@@ -1678,4 +1675,44 @@ button[aria-label]::before {
 
 body.dark-theme.soc1als__link {
   color: var(--color-light);
+}
+
+@keyframes showLeft {
+  0% {
+    left: -100%;
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    left: 0;
+    opacity: 1;
+  }
+}
+@keyframes showRight {
+  0% {
+    right: -100%;
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    right: 0;
+    opacity: 1;
+  }
+}
+@keyframes showTop {
+  0% {
+    top: -200px;
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
 }/*# sourceMappingURL=main.css.map */

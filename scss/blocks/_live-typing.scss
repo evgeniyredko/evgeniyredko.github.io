@@ -11,6 +11,9 @@
   width: 55%;
   margin: auto;
 
+  position: relative;
+  animation: showLeft 1s;
+
   @include tablet {
     width: 100%;
   }
