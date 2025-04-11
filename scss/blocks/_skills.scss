@@ -6,6 +6,16 @@
   &__inner {
     position: relative;
     padding-top: rem(40);
+    --columns: 2;
+    columns: 2;
+    display: grid;
+    gap: rem(25);
+    grid-template-columns: repeat(var(--columns, 1), 1fr);
+
+    @include mobile {
+      --columns: 1;
+      gap: rem(80);
+    }
 
     &::after {
       content: "";
@@ -41,6 +51,7 @@
       font-size: rem(36);
     }
   }
+
   &__list {
     display: flex;
     flex-direction: column;
@@ -50,58 +61,45 @@
       gap: rem(15);
     }
   }
-}
 
-.skill-card {
-  position: relative;
-  padding: rem(20) rem(80);
-  background-color: var(--color-light);
-  border-radius: rem(15);
-  font-size: rem(20);
-  box-shadow: var(--box-shadow);
-  transition-duration: var(--transition-duration);
-  padding-right: rem(40);
+  &__card {
+    position: relative;
+    padding: rem(20) rem(80);
+    background-color: var(--color-light);
+    border-radius: rem(15);
+    font-size: rem(20);
+    box-shadow: var(--box-shadow);
+    transition-duration: var(--transition-duration);
+    padding-right: rem(40);
 
-  @include tablet {
-    font-size: rem(16);
+    @include tablet {
+      font-size: rem(16);
+    }
+
+    @include mobile {
+      text-align: center;
+      font-size: rem(16);
+      padding: rem(20) rem(50);
+    }
   }
 
-  @include mobile {
-    text-align: center;
-    font-size: rem(16);
-    padding: rem(20) rem(50);
+  &__card:hover {
+    transform: scale(1.025);
   }
-}
 
-.skill-card:hover {
-  transform: scale(1.025);
-}
+  &__card::before {
+    content: "";
+    background-color: var(--color-accent);
+    border-radius: 50%;
+    position: absolute;
+    top: rem(29);
+    left: rem(43);
 
-.skill-card::before {
-  content: "";
-  background-color: var(--color-accent);
-  border-radius: 50%;
-  position: absolute;
-  top: rem(29);
-  left: rem(43);
+    @include square(rem(12));
 
-  @include square(rem(12));
-
-  @include mobile {
-    top: rem(25);
-    left: rem(25);
-  }
-}
-
-.grid {
-  --columns: 2;
-  columns: 2;
-  display: grid;
-  gap: rem(25);
-  grid-template-columns: repeat(var(--columns, 1), 1fr);
-
-  @include mobile {
-    --columns: 1;
-    gap: rem(80);
+    @include mobile {
+      top: rem(25);
+      left: rem(25);
+    }
   }
 }
