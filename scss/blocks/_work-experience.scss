@@ -161,15 +161,46 @@
   }
 
   &-card {
+    position: relative;
     padding-right: rem(40);
-    background: url(./../../images/icons/work/top-right.png) top right/50px 50px
-        no-repeat,
-      url(./../../images/icons/work/bottom-right.png) bottom right/50px 50px
-        no-repeat;
-
     @include mobile {
-      background: none;
       padding-right: 0;
+    }
+
+    &::before {
+      display: block;
+      content: "";
+      position: absolute;
+      border: rem(2) solid var(--color-dark);
+      border-left-color: transparent;
+      border-bottom-color: transparent;
+      width: rem(50);
+      height: rem(50);
+      top: 0;
+      right: 0;
+      z-index: 2;
+
+      @include mobile {
+        display: none;
+      }
+    }
+
+    &::after {
+      display: block;
+      content: "";
+      position: absolute;
+      border: rem(2) solid var(--color-dark);
+      border-left-color: transparent;
+      border-top-color: transparent;
+      width: rem(50);
+      height: rem(50);
+      bottom: 0;
+      right: 0;
+      z-index: 2;
+
+      @include mobile {
+        display: none;
+      }
     }
 
     &__date {

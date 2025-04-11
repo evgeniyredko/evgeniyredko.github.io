@@ -43,7 +43,7 @@
       display: block;
       content: "";
       position: absolute;
-      border: rem(2) solid #000;
+      border: rem(2) solid var(--color-dark);
       border-right-color: transparent;
       border-bottom-color: transparent;
       width: rem(50);
@@ -57,7 +57,7 @@
       display: block;
       content: "";
       position: absolute;
-      border: rem(2) solid #000;
+      border: rem(2) solid var(--color-dark);
       border-left-color: transparent;
       border-bottom-color: transparent;
       width: rem(50);
@@ -74,7 +74,7 @@
         display: block;
         content: "";
         position: absolute;
-        border: rem(2) solid #000;
+        border: rem(2) solid var(--color-dark);
         border-right-color: transparent;
         border-top-color: transparent;
         width: rem(50);
@@ -88,7 +88,7 @@
         display: block;
         content: "";
         position: absolute;
-        border: rem(2) solid #000;
+        border: rem(2) solid var(--color-dark);
         border-left-color: transparent;
         border-top-color: transparent;
         width: rem(50);

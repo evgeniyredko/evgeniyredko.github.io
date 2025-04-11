@@ -740,7 +740,7 @@ button[aria-label]::before {
   display: block;
   content: "";
   position: absolute;
-  border: 0.125rem solid #000;
+  border: 0.125rem solid var(--color-dark);
   border-right-color: transparent;
   border-bottom-color: transparent;
   width: 3.125rem;
@@ -753,7 +753,7 @@ button[aria-label]::before {
   display: block;
   content: "";
   position: absolute;
-  border: 0.125rem solid #000;
+  border: 0.125rem solid var(--color-dark);
   border-left-color: transparent;
   border-bottom-color: transparent;
   width: 3.125rem;
@@ -769,7 +769,7 @@ button[aria-label]::before {
   display: block;
   content: "";
   position: absolute;
-  border: 0.125rem solid #000;
+  border: 0.125rem solid var(--color-dark);
   border-right-color: transparent;
   border-top-color: transparent;
   width: 3.125rem;
@@ -782,7 +782,7 @@ button[aria-label]::before {
   display: block;
   content: "";
   position: absolute;
-  border: 0.125rem solid #000;
+  border: 0.125rem solid var(--color-dark);
   border-left-color: transparent;
   border-top-color: transparent;
   width: 3.125rem;
@@ -1478,13 +1478,48 @@ button[aria-label]::before {
   }
 }
 .work-experience-card {
+  position: relative;
   padding-right: 2.5rem;
-  background: url(./../../images/icons/work/top-right.png) top right/50px 50px no-repeat, url(./../../images/icons/work/bottom-right.png) bottom right/50px 50px no-repeat;
 }
 @media (width <= 47.99875rem) {
   .work-experience-card {
-    background: none;
     padding-right: 0;
+  }
+}
+.work-experience-card::before {
+  display: block;
+  content: "";
+  position: absolute;
+  border: 0.125rem solid var(--color-dark);
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+  width: 3.125rem;
+  height: 3.125rem;
+  top: 0;
+  right: 0;
+  z-index: 2;
+}
+@media (width <= 47.99875rem) {
+  .work-experience-card::before {
+    display: none;
+  }
+}
+.work-experience-card::after {
+  display: block;
+  content: "";
+  position: absolute;
+  border: 0.125rem solid var(--color-dark);
+  border-left-color: transparent;
+  border-top-color: transparent;
+  width: 3.125rem;
+  height: 3.125rem;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+}
+@media (width <= 47.99875rem) {
+  .work-experience-card::after {
+    display: none;
   }
 }
 .work-experience-card__date {
