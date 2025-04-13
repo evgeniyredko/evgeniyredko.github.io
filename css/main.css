@@ -1168,36 +1168,34 @@ button[aria-label]::before {
   flex-direction: column;
   gap: 1.5625rem;
 }
-.portfolio__item {
+.portfolio-card {
+  display: flex;
+  flex-direction: row;
+  gap: 6.25rem;
   padding: 3.125rem;
   border-radius: 1.5625rem;
   background-color: var(--color-light);
   box-shadow: var(--box-shadow);
 }
 @media (width <= 63.99875rem) {
-  .portfolio__item {
+  .portfolio-card {
     padding: 1.875rem;
   }
 }
 @media (width <= 47.99875rem) {
-  .portfolio__item {
+  .portfolio-card {
     padding-block: 3.125rem;
   }
 }
 @media (width <= 30.06125rem) {
-  .portfolio__item {
+  .portfolio-card {
     padding: 2.5rem;
   }
 }
 @media (width <= 24.37375rem) {
-  .portfolio__item {
+  .portfolio-card {
     padding: 1.875rem;
   }
-}
-.portfolio-card {
-  display: flex;
-  flex-direction: row;
-  gap: 6.25rem;
 }
 .portfolio-card__header {
   display: flex;
@@ -1417,20 +1415,6 @@ button[aria-label]::before {
 }
 .work-experience__item {
   position: relative;
-  padding: 3.125rem 5rem;
-  border-radius: 1.5625rem;
-  background-color: var(--color-light);
-  box-shadow: var(--box-shadow);
-}
-@media (width <= 47.99875rem) {
-  .work-experience__item {
-    padding: 1.875rem 1.875rem;
-  }
-}
-@media (width <= 30.06125rem) {
-  .work-experience__item {
-    text-align: center;
-  }
 }
 .work-experience__item::before {
   width: var(--circleSize);
@@ -1501,14 +1485,31 @@ button[aria-label]::before {
 }
 .work-experience-card {
   position: relative;
-  padding-right: 2.5rem;
+  padding: 3.125rem 5rem;
+  border-radius: 1.5625rem;
+  background-color: var(--color-light);
+  box-shadow: var(--box-shadow);
 }
 @media (width <= 47.99875rem) {
   .work-experience-card {
+    padding: 1.875rem 1.875rem;
+  }
+}
+@media (width <= 30.06125rem) {
+  .work-experience-card {
+    text-align: center;
+  }
+}
+.work-experience-card__wrapper {
+  position: relative;
+  padding-right: 2.5rem;
+}
+@media (width <= 47.99875rem) {
+  .work-experience-card__wrapper {
     padding-right: 0;
   }
 }
-.work-experience-card::before {
+.work-experience-card__wrapper::before {
   display: block;
   content: "";
   position: absolute;
@@ -1522,11 +1523,11 @@ button[aria-label]::before {
   z-index: 2;
 }
 @media (width <= 47.99875rem) {
-  .work-experience-card::before {
+  .work-experience-card__wrapper::before {
     display: none;
   }
 }
-.work-experience-card::after {
+.work-experience-card__wrapper::after {
   display: block;
   content: "";
   position: absolute;
@@ -1540,7 +1541,7 @@ button[aria-label]::before {
   z-index: 2;
 }
 @media (width <= 47.99875rem) {
-  .work-experience-card::after {
+  .work-experience-card__wrapper::after {
     display: none;
   }
 }

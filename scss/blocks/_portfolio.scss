@@ -39,7 +39,11 @@
     gap: rem(25);
   }
 
-  &__item {
+  &-card {
+    display: flex;
+    flex-direction: row;
+    gap: rem(100);
+
     padding: rem(50);
     border-radius: rem(25);
     background-color: var(--color-light);
@@ -60,12 +64,6 @@
     @include mobile-xs {
       padding: rem(30);
     }
-  }
-
-  &-card {
-    display: flex;
-    flex-direction: row;
-    gap: rem(100);
 
     &__header {
       display: flex;

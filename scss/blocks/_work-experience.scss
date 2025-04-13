@@ -77,18 +77,6 @@
 
   &__item {
     position: relative;
-    padding: rem(50) rem(80);
-    border-radius: rem(25);
-    background-color: var(--color-light);
-    box-shadow: var(--box-shadow);
-
-    @include mobile {
-      padding: rem(30) rem(30);
-    }
-
-    @include mobile-s {
-      text-align: center;
-    }
 
     &::before {
       @include square(var(--circleSize));
@@ -162,44 +150,60 @@
 
   &-card {
     position: relative;
-    padding-right: rem(40);
+    padding: rem(50) rem(80);
+    border-radius: rem(25);
+    background-color: var(--color-light);
+    box-shadow: var(--box-shadow);
+
     @include mobile {
-      padding-right: 0;
+      padding: rem(30) rem(30);
     }
 
-    &::before {
-      display: block;
-      content: "";
-      position: absolute;
-      border: rem(2) solid var(--color-dark);
-      border-left-color: transparent;
-      border-bottom-color: transparent;
-      width: rem(50);
-      height: rem(50);
-      top: 0;
-      right: 0;
-      z-index: 2;
+    @include mobile-s {
+      text-align: center;
+    }
 
+    &__wrapper {
+      position: relative;
+      padding-right: rem(40);
       @include mobile {
-        display: none;
+        padding-right: 0;
       }
-    }
 
-    &::after {
-      display: block;
-      content: "";
-      position: absolute;
-      border: rem(2) solid var(--color-dark);
-      border-left-color: transparent;
-      border-top-color: transparent;
-      width: rem(50);
-      height: rem(50);
-      bottom: 0;
-      right: 0;
-      z-index: 2;
+      &::before {
+        display: block;
+        content: "";
+        position: absolute;
+        border: rem(2) solid var(--color-dark);
+        border-left-color: transparent;
+        border-bottom-color: transparent;
+        width: rem(50);
+        height: rem(50);
+        top: 0;
+        right: 0;
+        z-index: 2;
 
-      @include mobile {
-        display: none;
+        @include mobile {
+          display: none;
+        }
+      }
+
+      &::after {
+        display: block;
+        content: "";
+        position: absolute;
+        border: rem(2) solid var(--color-dark);
+        border-left-color: transparent;
+        border-top-color: transparent;
+        width: rem(50);
+        height: rem(50);
+        bottom: 0;
+        right: 0;
+        z-index: 2;
+
+        @include mobile {
+          display: none;
+        }
       }
     }
 
