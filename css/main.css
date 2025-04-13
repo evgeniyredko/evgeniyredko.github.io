@@ -1055,6 +1055,7 @@ button[aria-label]::before {
   height: 47px;
   background-image: url("./../../images/icons/decoration.svg");
   background-repeat: no-repeat;
+  animation: showBottom 1s;
 }
 @media (width <= 47.99875rem) {
   .skills__inner {
@@ -1763,6 +1764,19 @@ body.dark-theme.soc1als__link {
   }
   100% {
     top: 0;
+    opacity: 1;
+  }
+}
+@keyframes showBottom {
+  0% {
+    bottom: -200px;
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    bottom: 0;
     opacity: 1;
   }
 }/*# sourceMappingURL=main.css.map */

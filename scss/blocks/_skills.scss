@@ -26,6 +26,7 @@
       height: 47px;
       background-image: url("./../../images/icons/decoration.svg");
       background-repeat: no-repeat;
+      animation: showBottom 1s;
     }
 
     @include mobile {

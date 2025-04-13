@@ -69,3 +69,17 @@
     opacity: 1;
   }
 }
+
+@keyframes showBottom {
+  0% {
+    bottom: -200px;
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    bottom: 0;
+    opacity: 1;
+  }
+}
