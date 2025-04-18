@@ -1222,6 +1222,7 @@ button[aria-label]::before {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 100%;
 }
 .portfolio-card__link {
   color: var(--color-accent);
@@ -1300,7 +1301,6 @@ button[aria-label]::before {
 }
 .portfolio-card__image {
   border-radius: 1.5625rem;
-  height: 100%;
   transition-duration: var(--transition-duration);
 }
 .portfolio-card__image:hover {
