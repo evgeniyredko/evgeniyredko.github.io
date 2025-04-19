@@ -1601,6 +1601,8 @@ button[aria-label]::before {
   height: 10px;
   background-image: url("./../../images/icons/link.png");
   background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }
 .work-experience-card__link:hover {
   text-decoration: underline;
